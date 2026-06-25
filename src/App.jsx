@@ -1,8 +1,11 @@
 import React from 'react'
+import GithubSearch from './components/GithubSearch'
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <GithubSearch />
+    </>
   )
 }
 

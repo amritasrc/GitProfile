@@ -1,1 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
 @import 'tailwindcss';
+
+body {
+    background: url(assets/backgound.jpg);
+}
+
+.crafty-girls-regular {
+    font-family: "Crafty Girls", cursive;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+.commissioner{
+    font-family: "Commissioner", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "FLAR" 0,
+        "VOLM" 0;
+}
