@@ -14,6 +14,8 @@ const GithubSearch = () => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
+        setProfile(null);
+        setError(null);
 
         if (!username.trim()) {
             setError("Please enter a GitHub username.");
@@ -29,7 +31,11 @@ const GithubSearch = () => {
 
         catch (error) {
             setProfile(null);
-            setError('User not found!');
+            if (error.response?.status === 404) {
+                setError("User not found!");
+            } else {
+                setError("Something went wrong. Please try again.");
+            }
         }
 
         finally {
@@ -65,10 +71,10 @@ const GithubSearch = () => {
             {profile &&
 
                 // profile container
-                <div className='profile-container mt-10 text-zinc-50 commissioner p-8 w-180 h-auto my-0 mx-auto rounded-xl shadow-xl shadow-zinc-900'>
+                <div className='profile-container m-10 mt-10 text-zinc-50 commissioner p-8 w-full max-w-3xl h-auto my-0 mx-auto rounded-xl shadow-xl shadow-zinc-900'>
 
                     {/* profile content */}
-                    <div className='flex gap-7 justify-start'>
+                    <div className='flex flex-col md:flex-row gap-7'>
 
                         {/* profile image */}
                         <div className='h-full shrink-0'>
