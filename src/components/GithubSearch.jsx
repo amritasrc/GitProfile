@@ -10,6 +10,7 @@ const GithubSearch = () => {
     const [username, setUsername] = useState("");
     const [profile, setProfile] = useState(null);
     const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     const submitHandler = async (e) => {
         e.preventDefault();
@@ -18,7 +19,7 @@ const GithubSearch = () => {
             setError("Please enter a GitHub username.");
             return;
         }
-
+        setLoading(true);
         try {
             const response = await axios.get(`https://api.github.com/users/${username}`);
             setProfile(response.data);
@@ -29,6 +30,10 @@ const GithubSearch = () => {
         catch (error) {
             setProfile(null);
             setError('User not found!');
+        }
+
+        finally {
+            setLoading(false);
         }
 
     }
@@ -49,8 +54,9 @@ const GithubSearch = () => {
                 />
 
                 <button
+                    disabled={loading}
                     className='commissioner bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded cursor-pointer'>
-                    Search
+                    {loading ? "Searching..." : "Search"}
                 </button>
 
             </form>
