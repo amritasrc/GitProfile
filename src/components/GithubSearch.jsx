@@ -102,7 +102,7 @@ const GithubSearch = () => {
                             </p>
 
                             {/* profile stats */}
-                            <div className='profile-stats flex justify-evenly items-center h-25 w-125 mt-5 rounded-xl text-black text-center shadow-xl shadow-zinc-900 text-[13px] leading-10'>
+                            <div className='profile-stats flex justify-evenly items-center h-25 w-full max-w-xl mt-5 rounded-xl text-black text-center shadow-xl shadow-zinc-900 text-[13px] leading-10'>
                                 <p>Repositories <br /> <span className='stats'>{profile.public_repos}</span></p>
                                 <p>Followers <br /> <span className='stats'>{profile.followers}</span></p>
                                 <p>Following <br /> <span className='stats'>{profile.following}</span></p>
