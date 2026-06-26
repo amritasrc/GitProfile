@@ -4,9 +4,23 @@ import axios from 'axios';
 const GithubSearch = () => {
 
     const [username, setUsername] = useState("");
+    const [profile, setProfile] = useState(null);
+    const [error, setError] = useState(null);
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
+
+        try {
+            const response = await axios.get('https://api.github.com/users/{username}');
+            setProfile(response.data);
+            setError(null);
+        }
+
+        catch (error) {
+            setProfile(null);
+            setError('User not found!');
+        }
+
     }
 
     return (
