@@ -33,52 +33,57 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/gitprofile.git
+```
 
 Navigate into the project:
 
+```bash
 cd gitprofile
+```
 
 Install dependencies:
-
+```bash
 npm install
+```
 
 Run the app:
-
+```bash
 npm run dev
-🔑 Usage
+```
+
+## 🔑 Usage
 Enter a valid GitHub username in the search bar
 Click Search
 View the profile details instantly
-🌐 API Used
 
+## 🌐 API Used
 This project uses the public GitHub API:
-
+```bash
 https://api.github.com/users/{username}
-
+```
 No authentication is required for basic requests.
 
-📸 Preview
-
-Add your screenshot here:
+## 📸 Preview
 
 ![GitProfile Screenshot](src/assets/demo.png)
 
-⚠️ Error Handling
+## ⚠️ Error Handling
 Shows message if username is empty
 Displays "User not found" for invalid usernames
 Handles network/API errors gracefully
 
 
-📁 Project Structure
+## 📁 Project Structure
+```bash
 src/
  ├── components/
  │    └── GithubSearch.jsx
  ├── App.jsx
  ├── main.jsx
-👨‍💻 Author
+ ``` 
 
+## 👨‍💻 Author
 Built by Amrita Kumari.💕
 
-📜 License
-
+## 📜 License
 This project is open source and free to use.
