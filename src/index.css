@@ -13,7 +13,7 @@ body {
 }
 
 
-.commissioner{
+.commissioner {
     font-family: "Commissioner", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -24,6 +24,16 @@ body {
         "VOLM" 0;
 }
 
-.profile-container{
+.profile-container {
     background: url(assets/profile-container-bg.jpg);
+}
+
+.profile-stats {
+    background: url(assets/profile-stats-bg.jpg);
+}
+
+.stats {
+    color: #2F5D50;
+    font-size: 30px;
+    font-weight: 800;
 }
