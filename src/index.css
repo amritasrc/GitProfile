@@ -26,6 +26,7 @@ body {
 
 .profile-container {
     background: url(assets/profile-container-bg.jpg);
+    background-repeat: no-repeat;
 }
 
 .profile-stats {
