@@ -14,6 +14,11 @@ const GithubSearch = () => {
     const submitHandler = async (e) => {
         e.preventDefault();
 
+        if (!username.trim()) {
+            setError("Please enter a GitHub username.");
+            return;
+        }
+
         try {
             const response = await axios.get(`https://api.github.com/users/${username}`);
             setProfile(response.data);
