@@ -21,6 +21,10 @@ const GithubSearch = () => {
             setError("Please enter a GitHub username.");
             return;
         }
+        const tempUsername = username;
+        setUsername("");
+
+
         setLoading(true);
         try {
             const response = await axios.get(`https://api.github.com/users/${username}`);
