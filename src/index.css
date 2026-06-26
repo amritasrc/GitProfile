@@ -3,7 +3,7 @@
 @import 'tailwindcss';
 
 body {
-    background: url(assets/backgound.jpg);
+    background: url(/assets/backgound.jpg);
 }
 
 .crafty-girls-regular {
@@ -25,12 +25,12 @@ body {
 }
 
 .profile-container {
-    background: url(assets/profile-container-bg.jpg);
+    background: url(/assets/profile-container-bg.jpg);
     background-repeat: no-repeat;
 }
 
 .profile-stats {
-    background: url(assets/profile-stats-bg.jpg);
+    background: url(/assets/profile-stats-bg.jpg);
 }
 
 .stats {
