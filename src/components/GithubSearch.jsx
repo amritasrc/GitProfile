@@ -25,7 +25,6 @@ const GithubSearch = () => {
         try {
             const response = await axios.get(`https://api.github.com/users/${username}`);
             setProfile(response.data);
-            console.log(response.data);
             setError(null);
         }
 
