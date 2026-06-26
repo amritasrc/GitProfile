@@ -23,3 +23,7 @@ body {
         "FLAR" 0,
         "VOLM" 0;
 }
+
+.profile-container{
+    background: url(assets/profile-container-bg.jpg);
+}
