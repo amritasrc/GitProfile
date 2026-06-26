@@ -81,9 +81,9 @@ const GithubSearch = () => {
                         <div className='flex flex-col'>
 
                             {/* profile description */}
-                            <div className='flex justify-between items-center gap-25'>
+                            <div className='flex justify-between items-center'>
 
-                                <h2 className='text-3xl font-semibold'>{profile.name}</h2>
+                                <h2 className='text-3xl font-semibold'>{profile.name || profile.login}</h2>
                                 <p>
                                     Joined:{" "}
                                     {new Date(profile.created_at).toLocaleDateString("en-US", {
@@ -98,7 +98,8 @@ const GithubSearch = () => {
                                 target='_blank'
                                 className='text-zinc-300 mt-1'>@{profile.login}</a>
 
-                            <p className='mt-5 mb-5 ml-1.25 text-lg leading-6 text-zinc-200 font-normal w-full'>{profile.bio}</p>
+                            <p className='mt-5 mb-5 ml-1.25 text-lg leading-6 text-zinc-200 font-normal w-full'>{profile.bio || "No bio available."}
+                            </p>
 
                             {/* profile stats */}
                             <div className='profile-stats flex justify-evenly items-center h-25 w-125 mt-5 rounded-xl text-black text-center shadow-xl shadow-zinc-900 text-[13px] leading-10'>
@@ -108,10 +109,10 @@ const GithubSearch = () => {
                             </div>
 
                             {/* profile info */}
-                            <div className='flex justify-start mt-10 gap-20'>
+                            <div className='flex justify-between mt-10'>
                                 <p className='flex gap-1 items-center'>
                                     <IoLocationSharp />
-                                    {profile.location}
+                                    {profile.location || "Unknown"}
                                 </p>
                                 <p className="flex gap-1 items-center">
                                     <IoBusinessSharp />
