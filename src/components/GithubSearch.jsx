@@ -77,10 +77,10 @@ const GithubSearch = () => {
                 <div className='profile-container m-10 mt-10 text-zinc-50 commissioner p-8 w-full max-w-3xl h-auto my-0 mx-auto rounded-xl shadow-xl shadow-zinc-900'>
 
                     {/* profile content */}
-                    <div className='flex flex-col md:flex-row gap-7'>
+                    <div className='flex flex-col items-center md:flex-row md:items-start gap-7'>
 
                         {/* profile image */}
-                        <div className='h-full shrink-0'>
+                        <div className='shrink-0'>
                             <img src={profile.avatar_url}
                                 alt="profile-avatar"
                                 className="w-32 h-32 rounded-full border-[3px] border-zinc-500 shadow-xl shadow-zinc-900" />
@@ -90,7 +90,7 @@ const GithubSearch = () => {
                         <div className='flex flex-col'>
 
                             {/* profile description */}
-                            <div className='flex justify-between items-center'>
+                            <div className='flex flex-col sm:flex-row mb-5 sm:mb-0 justify-between items-center'>
 
                                 <h2 className='text-3xl font-semibold'>{profile.name || profile.login}</h2>
                                 <p>
