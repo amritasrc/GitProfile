@@ -13,8 +13,7 @@ const GithubSearch = () => {
         try {
             const response = await axios.get(`https://api.github.com/users/${username}`);
             setProfile(response.data);
-            console.log(response.data);
-            
+           // console.log(response.data);
             setError(null);
         }
 
@@ -43,6 +42,8 @@ const GithubSearch = () => {
                     Search
                 </button>
             </form>
+
+            {error && <p className='text-zinc-100 text-2xl mt-10'>{error}</p>}
 
         </div>
     )
