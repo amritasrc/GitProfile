@@ -87,7 +87,7 @@ const GithubSearch = () => {
                         </div>
 
                         {/* profile details */}
-                        <div className='flex flex-col'>
+                        <div className="flex flex-col flex-1 min-w-0">
 
                             {/* profile description */}
                             <div className='flex flex-col sm:flex-row mb-5 sm:mb-0 justify-between items-center'>
@@ -107,7 +107,8 @@ const GithubSearch = () => {
                                 target='_blank'
                                 className='text-zinc-300 mt-1'>@{profile.login}</a>
 
-                            <p className='mt-5 mb-5 ml-1.25 text-lg leading-6 text-zinc-200 font-normal w-full'>{profile.bio || "No bio available."}
+                            <p className="mt-5 mb-5 text-lg leading-6 text-zinc-200 w-full wrap-break-word">
+                                {profile.bio || "No bio available."}
                             </p>
 
                             {/* profile stats */}
